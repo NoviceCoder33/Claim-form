@@ -147,13 +147,22 @@ body {
   box-sizing: border-box;
 }
 
+.form-grid input:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 .input-with-icon {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .input-with-icon input {
   width: 100%;
-  padding-right: 2rem;
+  padding-right: 2.5rem;
 }
 
 .input-with-icon .icon {
@@ -161,6 +170,7 @@ body {
   right: 0.75rem;
   top: 50%;
   transform: translateY(-50%);
+  pointer-events: none;
 }
 
 textarea {
@@ -192,6 +202,11 @@ textarea {
   border-radius: 8px;
   width: 100%;
   cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #edd4b9;
 }
 
 @media (max-width: 768px) {
@@ -219,5 +234,9 @@ textarea {
   textarea {
     font-size: 0.95rem;
     padding: 0.65rem;
+  }
+
+  .checkbox {
+    flex-direction: column;
   }
 }
